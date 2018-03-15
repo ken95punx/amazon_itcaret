@@ -2,31 +2,31 @@
 
 <%= form_with url: books_path, local: true do |form| %>
   <p>
-    <%= form.label :title %><br>
+    <%= form.label :タイトル %><br>
     <%= form.text_field :title %>
   </p>
 
   <p>
-    <%= form.label :price %><br>
+    <%= form.label :価格 %><br>
     <%= form.text_field :price %>
   </p>
 
   <p>
-    <%= form.label :image %><br>
+    <%= form.label :画像 %><br>
     <%= form.file_field :image %>
   </p>
 
   <p>
-    <%= form.label :release_date %><br>
+    <%= form.label :発売日 %><br>
     <%= form.date_select :release_date %>
   </p>
 
   <p>
-    <%= form.label :author %><br>
+    <%= form.label :著者 %><br>
     <%= form.text_field :author %>
   </p>
 
   <p>
-    <%= form.submit %>
+    <%= form.submit value: "登録" %>
   </p>
 <% end %>
