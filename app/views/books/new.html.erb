@@ -1,28 +1,28 @@
-<h1>書籍登録</h1>
+<h1>新規登録</h1>
 
 <%= form_with url: books_path, local: true do |form| %>
   <p>
-    <%= form.label :タイトル %><br>
+    <%= form.label :title %><br>
     <%= form.text_field :title %>
   </p>
 
   <p>
-    <%= form.label :価格 %><br>
+    <%= form.label :price %><br>
     <%= form.text_field :price %>
   </p>
 
   <p>
-    <%= form.label :画像 %><br>
+    <%= form.label :image %><br>
     <%= form.file_field :image %>
   </p>
 
   <p>
-    <%= form.label :発売日 %><br>
+    <%= form.label :release_date %><br>
     <%= form.date_select :release_date %>
   </p>
 
   <p>
-    <%= form.label :著者 %><br>
+    <%= form.label :author %><br>
     <%= form.text_field :author %>
   </p>
 
@@ -30,3 +30,6 @@
     <%= form.submit value: "登録" %>
   </p>
 <% end %>
+
+<p><%= link_to '戻る', books_path %></p>
+
